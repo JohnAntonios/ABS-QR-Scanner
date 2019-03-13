@@ -9,6 +9,10 @@ function openQRCamera(node) {
 				);
 			} else {
 				node.parentNode.previousElementSibling.value = res;
+				console.log(
+					node.parentNode.previousElementSibling
+						.value
+				);
 			}
 		};
 		qrcode.decode(reader.result);
