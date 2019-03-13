@@ -25,17 +25,22 @@
 					<div class="wrapper-qr text-center">
 						<input
 							type="text"
+							size="16"
+							placeholder="Tracking Code"
 							class="qrcode-text"
-						/><label
-							class="qrcode-text-btn"
-						>
-							<input
+						/><label class="qrcode-text-btn"
+							><input
 								type="file"
 								accept="image/*"
 								capture="environment"
 								onchange="openQRCamera(this);"
-							/>
-						</label>
+								tabindex="-1"
+						/></label>
+						<input
+							type="button"
+							value="Go"
+							disabled
+						/>
 					</div>
 				</div>
 				<div class="col-md-3"></div>

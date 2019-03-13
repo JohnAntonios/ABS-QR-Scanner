@@ -1,10 +1,12 @@
 function openQRCamera(node) {
-	let reader = new FileReader();
+	var reader = new FileReader();
 	reader.onload = function() {
-		node.value = " ";
+		node.value = "";
 		qrcode.callback = function(res) {
 			if (res instanceof Error) {
-				console.log("No QR code found.");
+				alert(
+					"No QR code found. Please make sure the QR code is within the camera's frame and try again."
+				);
 			} else {
 				node.parentNode.previousElementSibling.value = res;
 			}
