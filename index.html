@@ -2,26 +2,50 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Page Title</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="css/bulma.css" />
+		<title>ABS QR Scanner</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<div class="columns is-mobile">
-			<div class="column">
-				<h1 class="title has-text-centered">Do you know de way?</h1>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="text-info text-center">
+						Do you know de way?
+					</h1>
+				</div>
+			</div>
+			<div class="row mt-4">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<div class="wrapper-qr text-center">
+						<input
+							type="text"
+							class="qrcode-text"
+						/><label
+							class="qrcode-text-btn"
+						>
+							<input
+								type="file"
+								accept="image/*"
+								capture="environment"
+								onchange="openQRCamera(this);"
+							/>
+						</label>
+					</div>
+				</div>
+				<div class="col-md-3"></div>
 			</div>
 		</div>
-		<input type="text" class="qrcode-text" /><label class="qrcode-text-btn">
-			<input
-				type="file"
-				accept="image/*"
-				capture="environment"
-				tabindex="-1"
-			/>
-		</label>
+
 		<!-- https://www.sitepoint.com/create-qr-code-reader-mobile-website/ -->
+		<script src="js/jquery-3.3.1.js"></script>
+		<script src="js/qr_packed.js"></script>
+		<script src="js/bootstrap.bundle.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

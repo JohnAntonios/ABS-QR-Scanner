@@ -1,0 +1,14 @@
+.qrcode-text-btn {
+	display: inline-block;
+	margin-left: 1em;
+	height: 2em;
+	width: 2em;
+	background-image: url(../img/camera.svg);
+	background-size: 80% 80%;
+	background-repeat: no-repeat;
+}
+
+.qrcode-text-btn > input[type="file"] {
+	opacity: 0;
+	overflow: hidden;
+}
