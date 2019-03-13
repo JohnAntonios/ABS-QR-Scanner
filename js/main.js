@@ -1,3 +1,5 @@
+let qrData = null;
+
 function openQRCamera(node) {
 	var reader = new FileReader();
 	reader.onload = function() {
@@ -9,10 +11,9 @@ function openQRCamera(node) {
 				);
 			} else {
 				node.parentNode.previousElementSibling.value = res;
-				console.log(
+				qrData =
 					node.parentNode.previousElementSibling
-						.value
-				);
+						.value;
 			}
 		};
 		qrcode.decode(reader.result);
